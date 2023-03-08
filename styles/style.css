@@ -91,7 +91,7 @@
     top: 135px;
     left: 0;
     height: 90px;
-    /* user-select: none; */
+    user-select: none;
     pointer-events: none;
     z-index: 10 ;
 }
@@ -188,12 +188,14 @@ header h1{
 #mainNav ul{
     background-color: rgb(0, 0, 0);
     height: 60px;
+    overflow-y: hidden;
+
 }
 #mainNav ul li {
     display: inline-block;
     width: 7%;
     margin: 15px 5px 5px 5px;
-    padding: 5px;
+    padding: 5px 5px 20px 5px;
     /* background-color: white; */
     border-radius: 7px; 
 }
@@ -225,14 +227,60 @@ header h1{
     0 0 30px rgb(255, 0, 98);
 }
 
-/* object-fit: cover; */
+    /* menu desplegable */
+    #mainNav ul ul {
+        display:none;
+        position: absolute;
+        width: 80%;
+        left: 10%;
+        top: 210px;
+        height: 380px;
+        background-color: rgba(0, 0, 0, 0.888);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: white 2px solid;
+        z-index: 3;
+    }
+    
+    /* items del menu desplegable */
+    #mainNav ul ul li {
+            height: 15px;
+            width: 140px;
+            overflow-y: hidden;
+    }
+ 
+    #mainNav ul ul li:hover > label {
+        color: #d81444;
+    }
+    #mainNav ul ul li label{
+        color: white;
+    }
+
+    /* items del menu desplegable al pasar el ratón */
+    #mainNav ul li:hover > ul {
+        display:block;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /* BARRA DE BUSQUEDA */
 #search{
     position: absolute; 
-    right: 330px;
+    right: 5%;
     top: 168px;
 }
 
@@ -395,7 +443,7 @@ aside ul h3{
     #textoTop{
         text-decoration: none;
         position: absolute;
-        bottom: 7%;
+        bottom: 7px;
         color: white;
         background-color: rgba(0, 0, 0, 0.581);
         margin: 0 0 0 11%;
@@ -770,7 +818,7 @@ footer article ul li{
         }
 
         main article{
-            height: 195px;
+            height: 218px;
             width: 145px;
             padding: 8px 0 0 0;
             overflow-y:hidden;
@@ -824,7 +872,6 @@ footer article ul li{
         }
 
 }
-
 
 
 
@@ -894,7 +941,7 @@ footer article ul li{
             z-index: 3;
             float: left;
             clear: both;
-            height: 450px;
+            height: 700px;
         }
 
         footer article ul li{
@@ -904,19 +951,19 @@ footer article ul li{
             #website{
                 font-size: 80%;
                 left: 0%;
-                margin-left: 40px;
+                margin:20px 0 0 38%;
             }
 
             #explorar{
                 font-size: 80%;
                 left: 0%;
-                margin-left: 300px;
+                margin: 180px 0 0 45%;
             }
 
             #siguenos{
                 font-size: 80%;
                 left: 0%;
-                margin: 180px 0 0 40px;
+                margin: 360px 0 0 28%;
             }
 
                 #siguenos img{
@@ -927,7 +974,9 @@ footer article ul li{
             #contenido{
                 font-size: 80%;
                 left: 0%;
-                margin: 180px 0 0 300px;
+                width: 200px;
+                text-align: center;
+                margin: 520px 0 0 30%;
             }
                 #contenido p{
                     margin-bottom: 20px;
