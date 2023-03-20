@@ -353,7 +353,8 @@ main{
     padding: 5px 20px 5px 20px;
     border: solid white 2px;
     background-color: rgb(36, 36, 36);
-    border-radius: 20PX;
+    border-radius: 20px;
+    text-decoration: none;
 }
 
 .etiquetas a:hover{
@@ -883,6 +884,58 @@ footer article ul li{
         margin: 0 0 0 15%;
     }
 
+    /* Control */
+    .control{
+        position: fixed;
+        bottom: 12px;
+        right: 0;
+        background-color: rgb(0, 0, 0);
+        padding: 20px 30px 20px 30px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        z-index: 2;
+    }
+    .adelante{
+        color: white;
+        font-size: 20px;
+
+    }
+    .menu{
+        color: white;
+        margin: 0 30px 0 0;
+        font-size: 20px;
+
+    }
+    .atras{
+        color: white;
+        margin: 0 30px 0 0;
+        font-size: 20px;
+
+    }
+    .arribaPag{
+        color: white;
+        margin: 0 0 0 0;
+        font-size: 20px;
+
+    }
+
+    /* Pagina del manga */
+    .pagina{
+        /* float: left;
+        width: 800px;
+        height: 1200px;
+        padding: 0 0 10px 30%; */
+    
+        /* Evita la descarga/arrastrar/copy¬paste de los capitulos */
+        pointer-events: none;
+        
+        display: block;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
 
 
     /**Footer Tablet**/
@@ -930,6 +983,15 @@ footer article ul li{
 
 /* ----------------------MOVILES---------------------- */
 @media only screen and (max-width: 500px) {
+
+    #search input {
+        height: 25px;
+        width: 120px;
+        padding: 3px 0 0 10px;
+        font-size: 15px;
+        border-radius: 100px;
+        border: white solid 1px;
+    }
 
 
     #mainNav ul li{
@@ -984,12 +1046,100 @@ footer article ul li{
         margin: 10px 0 0 9%;
     }
 
+
+    /* LATERAL DISPLAY */
+    #cuentaLateral{
+        z-index: 10;
+    }
+    #cuentaLateral ul{
+        width: 100%;
+        margin-top: -190px;
+    }
+
+    .avatar img{
+        height: 100px;
+        margin: 90px 0 30px 38%;
+    }
+
+    .avatar p {
+        margin-top: 40px;
+    }
+
+    #opcionMovil{
+        display: contents;
+    }
+    
+    #logout{
+        top: 13%;
+    }
+
+
     /**Footer Movil**/
     footer{
         z-index: 3;
         float: left;
         clear: both;
         height: 700px;
+    }
+
+
+
+
+
+
+
+    /* Control */
+    .control{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        border-radius: 0;
+        z-index: 2;
+    }
+    .adelante{
+        color: white;
+        margin-left: 10%;
+        font-size: 20px;
+
+    }
+    .menu{
+        color: white;
+        margin: 0 30px 0 0;
+        margin-left: 10%;
+        font-size: 20px;
+
+    }
+    .atras{
+        color: white;
+        margin: 0 30px 0 0;
+        margin-left: 10%;
+        font-size: 20px;
+
+    }
+    .arribaPag{
+        color: white;
+        margin: 0 0 0 0;
+        margin-left: 10%;
+        font-size: 20px;
+
+    }
+
+    /* pagina */
+    .pagina{
+        /* float: left;
+        width: 800px;
+        height: 1200px;
+        padding: 0 0 10px 30%; */
+    
+        /* Evita la descarga/arrastrar/copy¬paste de los capitulos */
+        pointer-events: none;
+        
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     footer article ul li{
