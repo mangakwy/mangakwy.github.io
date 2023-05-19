@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangaK Sign In</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/formulario.css">
+    <link rel="icon" href="images/iconos/icon.ico" type="ico">
+    <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Titulo / header -->
+    <header>
+        <h1 id="inicioPagina" class="neonText"><a href="index.html">SignIn</a></h1>
+        <p>"Crea perfil en la pagina"</p>
+    </header>
+
+
+    <div class="contenedor">
+        <h1>Registrarse</h1>
+        <form action="/registro" novalidate>
+
+            <!-- nombre usuario -->
+
+
+            <input type="text" id="username" placeholder="Usuario" name="username" pattern="[a-zA-Z0-9\-_]{3,16}"
+                required autocomplete="off">
+
+
+
+            <p class="aviso" id="avisoUsername">El nombre debe tener entre 3 y 16 caracteres alfanuméricos, guiones (-)
+                y/o guiones bajos (_)</p>
+
+
+            <!-- email -->
+            <input type="email" id="email" placeholder="Correo electrónico" name="email" required autocomplete="off">
+
+            <p class="aviso" id="avisoEmail">Por favor, ingrese una dirección de correo electrónico válida. La dirección
+                de correo electrónico debe tener el formato usuario@dominio.com y no puede contener espacios en blanco
+            </p>
+
+            <!-- Contraseña -->
+            <input type="password" id="password" placeholder="Contraseña" name="password"
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])(?!.*\s)[a-zA-Z\d#$@!%&*?]{8,16}" required>
+
+            <p class="aviso" id="avisoPassword">La contraseña debe tener entre 8 y 16 caracteres y contener al menos una
+                letra mayúscula, una letra minúscula, un número y un carácter especial (#$@!%&*?). No se permiten
+                espacios en blanco</p>
+
+            <!-- Repetir contraseña -->
+            <input type="password" id="passwordRepit" placeholder="Repite Contraseña" name="passwordRepit"
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])(?!.*\s)[a-zA-Z\d#$@!%&*?]{8,16}" required>
+
+            <p class="aviso" id="avisoPasswordRepit">Repita la contraseña introducida</p>
+
+            <div>
+                <input type="checkbox" name="notificacion" id="notification">
+                <p id="notificacionTexto">Recibir notificaciones de Mangak</p>
+            </div>
+            <div>
+                <input type="checkbox" name="notificacion" id="tyc">
+                <p id="tycTexto">He leido y aceptado los <a href="footerContent/termsAndCondition.html">terminos y
+                        condiciones</a>
+                </p>
+            </div>
+
+            <!-- Boton de registro -->
+            <input type="submit">
+        </form>
+        <p id="textoFormulario">¿Ya tienes cuenta? <a id="loggin" href="loggin.html">Inicia sesión</a></p>
+    </div>
+
+    <article class="valido">
+        <article>
+            <h1>Registro completado</h1>
+            <p>El usuario "<span id="nombreUsuario"></span>" se registró de forma correcta.</p>
+            <p id="jsonContainer"></p>
+            <a href="loggin.html">Inicia sesión</a>
+        </article>
+
+    </article>
+      
+
+
+    <script src="js/signIn.js"></script>
+
+
+
+    <!-- Footer pag sim -->
+    <footer>
+        <article id="website">
+            <h4>Website</h4>
+            <ul>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#">Nuestros servicios</a></li>
+                <li><a href="#">Politica de privacidad</a></li>
+            </ul>
+        </article>
+
+        <article id="explorar">
+            <h4>Exploral</h4>
+            <ul>
+                <li><a href="#">Biblioteca</a></li>
+                <li><a href="#">Grupos</a></li>
+            </ul>
+        </article>
+
+        <article id="siguenos">
+            <h4>Siguenos</h4>
+            <a href="https://www.facebook.com/profile.php?id=100091992384516"><img src="images/iconos/facebookIcon.png"
+                    alt=""></a>
+            <a href="https://twitter.com/mangakwy"><img src="images/iconos/twitterIcon.png" alt=""></a>
+            <a href="https://www.instagram.com/mangakwy/    "><img src="images/iconos/InstagramIcon.png" alt=""></a>
+            <a href="https://discord.gg/4bwycKyXnw"><img src="images/iconos/discrodIcon.png" alt=""></a>
+        </article>
+
+        <article id="contenido">
+            <h4>Contenidos</h4>
+            <p>
+                MangaK no realiza las traducciones aquí publicadas y solo es un repositorio con visor propio para que se
+                puedan leer de forma comoda las obras.
+            </p>
+        </article>
+        <!-- copyright -->
+        <article id="copyright">&copy; 2022 MangaK</article>
+
+    </footer>
+</body>
+
+</html>
